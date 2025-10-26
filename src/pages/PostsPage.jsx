@@ -3,7 +3,7 @@ import React from 'react';
 import { usePostsQuery } from '../features/posts/hooks';
 
 export default function PostsPage() {
-  const { data: posts, isLoading, isError, error } = usePostsQuery({  });
+  const { data: posts, isLoading, isError, error } = usePostsQuery({ limit: 5 });
 
   if (isLoading) {
     return (
