@@ -5,15 +5,22 @@ import { Provider } from 'react-redux';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from './App';
 import store from './store/store';
-import './index.css';
+
+// global styles for app shell (reset, base typography, utilities)
+import './styles/global.css';
+
+import ThemeProviderWrapper from './theme/ThemeProviderWrapper';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 const queryClient = new QueryClient();
 
 root.render(
   <Provider store={store}>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <ThemeProviderWrapper>
+        <App />
+      </ThemeProviderWrapper>
     </QueryClientProvider>
   </Provider>
 );
