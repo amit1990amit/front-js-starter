@@ -1,0 +1,69 @@
+.app-header {
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #f6f6f6;
+  height: 60px; /* fixed header height from Figma */
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.app-header-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* LEFT SECTION: logo + version text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Logo sizing from Figma: width 80px, height 24px */
+.header-logo {
+  width: 80px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Version text from Figma:
+   font size: 16px
+   weight: 500
+   color: #333333
+*/
+.header-version {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #333333;
+  white-space: nowrap;
+}
+
+/* RIGHT SECTION: placeholder for future actions */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 480px) {
+  .app-header {
+    padding: 0 12px;
+  }
+
+  .app-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    height: auto;
+  }
+}

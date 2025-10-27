@@ -1,0 +1,138 @@
+.products-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  max-width: 58vw;
+}
+
+/* This is the whole bar with search + categories (58px tall in Figma) */
+.top-section {
+  flex: 0 0 auto;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+/* Inner layout row between search and categories */
+.search-header-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-bar-inner {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 6px;
+  height: 40px;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* in Figma, the magnifier icon appears on the left side of the box,
+   and the placeholder text sits more to the right / RTL.
+   We'll keep icon visually on the left, input RTL text to the right. */
+.search-bar-icon {
+  font-size: 16px;
+  color: #555;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.search-bar-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #222;
+  min-width: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.search-bar-input::placeholder {
+  color: #777;
+  font-weight: 400;
+}
+
+.categories {
+  flex: 2;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  max-width: 60vw;
+  font-size: 0.8rem;
+  color: #444;
+  white-space: nowrap;
+}
+
+.categories-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+  color: #444;
+  font-weight: 500;
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.categories-item-active {
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+}
+
+/* LIST SECTION (product grid) */
+.list-section {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Scrollable list itself (inside list-section) */
+.products-list {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Grid of product cards aligned to top-left, wrapping like Figma rows */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  align-content: flex-start;
+  align-items: flex-start;
+}

@@ -1,0 +1,53 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+/* Left cart area (40%) */
+.cart-section {
+  flex: 0 0 40%;
+  background-color: #ffffff;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Right product/search area (60%) */
+.products-section {
+  flex: 1;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Placeholder titles for now */
+.placeholder-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive: stack vertically below 900px */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .cart-section,
+  .products-section {
+    flex: none;
+    width: 100%;
+  }
+}

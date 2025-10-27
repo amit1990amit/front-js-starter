@@ -1,0 +1,185 @@
+/* cart-item-row was already defined, but we’ll refine it */
+.cart-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-row:last-child {
+  border-bottom: none;
+}
+
+/* LEFT COLUMN: price + delete button stacked horizontally */
+.cart-item-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 60px;
+  gap: 4px;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.cart-item-remove-btn {
+  background: transparent;
+  border: none;
+  color: #c00;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* MIDDLE COLUMN */
+.cart-item-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* first line: product name + qty badge */
+.cart-item-topline {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  min-width: 0;
+  justify-content: flex-start;
+}
+
+.cart-item-name {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500; /* matches "bodyLarge / Medium / 500" from Figma */
+  color: #333333;
+  word-break: break-word;
+  text-align: right;
+  min-width: 0;
+  flex: 1;
+}
+
+.cart-item-qty-badge {
+  background-color: #198c2a; /* green-ish, we can tweak to exact Figma green later */
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+/* second line: barcode */
+.cart-item-barcode {
+  font-size: 14px;
+  line-height: 16px;
+  color: #555;
+  direction: ltr;
+  unicode-bidi: embed;
+  text-align: right;
+}
+
+/* RIGHT COLUMN: thumbnail only */
+.cart-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 48px;
+}
+
+.cart-item-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+/* scroll area should leave space for paybar */
+.cart-items-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* ensure space below list so paybar doesn't overlap */
+}
+
+.cart-footer-bar {
+  position: fixed;
+  bottom: 16px;
+  width:90%;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #198c2a; /* or the exact Figma green */
+  border-radius: 8px;
+  min-height: 56px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #198c2a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  width: 40vw;
+}
+
+.cart-total {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.cart-pay-btn {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cart-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  /* padding: 12px 16px; */
+}
+.cart-title {
+  color: #34AA54;
+  font-size: 28px;
+  font-weight: 600;
+}
+.cart-clear-btn {
+  height: 56px;
+  width: 56px;
+  background-color: #FFE5EF;
+  color: #E53935;
+  font-size: x-large;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
